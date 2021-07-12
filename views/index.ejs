@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODOリスト</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>TODOの登録</h1>
+    <form action="/" method="POST">
+      <input required type="text" name="todo"/>
+      <input type="submit" value="登録">
+    </form>
+    <ul>
+    <% for(i in todos) { %>
+      <li>
+        ID: <%= i + "→"　+ todos[i] %>
+        <a href="/edit?id=<%= i %>" >編集</a>
+        <a href="/delete?id=<%= i %>" >削除</a>
+      </li>
+    <% } %>
+    </ul>
+  </body>
+</html>

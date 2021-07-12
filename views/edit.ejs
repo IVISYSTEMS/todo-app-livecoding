@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODOリスト</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>TODOの編集</h1>
+    <form action="/edit?id=<%= id %>" method="POST">
+      <input required type="text" value="<%= todo %>" name="todo"/>
+      <input type="submit" value="更新">
+    </form>
+  </body>
+</html>
