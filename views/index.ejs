@@ -11,11 +11,11 @@
       <input type="submit" value="登録">
     </form>
     <ul>
-    <% for(i in todos) { %>
+    <% for(todo of todos) { %>
       <li>
-        ID: <%= i + "→"　+ todos[i] %>
-        <a href="/edit?id=<%= i %>" >編集</a>
-        <a href="/delete?id=<%= i %>" >削除</a>
+        ID: <%= todo.id + "→"　+ todo.content %>
+        <a href="/edit?id=<%= todo.id %>" >編集</a>
+        <a href="/delete?id=<%= todo.id %>" >削除</a>
       </li>
     <% } %>
     </ul>
